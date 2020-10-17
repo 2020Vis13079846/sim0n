@@ -14,3 +14,4 @@ nc -lvp 4444
 
 **2.** Modify this string of payload
 
+https://github.com/enty8080/sim0n/blob/0367c93413a0dba5829f4ee1b2843b7ca1b68fb6/payload.nasm#L55
