@@ -1,6 +1,9 @@
-print("Generate C 1.0")
-print("Use 'make shellcode' to generate shellcode.")
-shellcode = input('Enter generated shellcode: ')
+if len(sys.argv) < 3:
+    print("Usage: generate-c <shellcode> <output_file>")
+    sys.exit()
+
+shellcode = sys.argv[1]
+output = sys.argv[2]
 
 code = ""
 
@@ -15,6 +18,6 @@ code += "    int (*ret)() = (int(*)())shellcode;\n"
 code += "    ret();\n"
 code += "}\n"
 
-file = open("exploit.c", "a")
+file = open(output, "a")
 file.write(code)
 file.close()
