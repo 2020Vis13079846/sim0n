@@ -2,10 +2,10 @@ ASM      = nasm
 ASMFLAGS =
 
 LD       = ld
-LDFLAGS  =
+LDFLAGS  = -m elf_i386
 
 TARGET   = payload
-FORMAT   = elf64
+FORMAT   = elf32
 
 SRCS     = payload.nasm
 Q        = @
